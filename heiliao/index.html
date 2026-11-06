@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黑料-黑料热点合集_黑料爆料动态与吃瓜看点</title>
+<meta name="description" content="黑料首页汇总网络热点爆料与吃瓜看点，按话题整理黑料动态，提供清晰的时间线索与来源说明，帮助读者快速了解当前热议内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23131318'/%3E%3Cpath d='M20 44L32 18l12 26' stroke='%23ff4d6d' stroke-width='5' fill='none' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='46' r='3.4' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#131318;
+  --ink-2:#1d1d25;
+  --paper:#f7f5f2;
+  --paper-2:#efeae4;
+  --line:#ded7cf;
+  --accent:#e23b52;
+  --accent-2:#ffb703;
+  --text:#23232b;
+  --muted:#6c6a72;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:var(--paper);
+  color:var(--text);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{width:min(1160px,92vw);margin-inline:auto}
+
+/* Header */
+.site-head{
+  position:sticky;top:0;z-index:50;
+  background:rgba(19,19,24,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.head-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding:14px 0;
+}
+.logo{display:flex;align-items:center;gap:10px;color:#fff}
+.logo-mark{
+  width:38px;height:38px;border-radius:11px;
+  background:linear-gradient(145deg,#2a2a34,#16161c);
+  display:grid;place-items:center;
+  border:1px solid rgba(255,255,255,.12);
+  flex:0 0 auto;
+}
+.logo-text{
+  font-size:1.32rem;font-weight:800;letter-spacing:.06em;
+  color:#fff;
+}
+.logo-text em{font-style:normal;color:var(--accent-2)}
+.nav{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.nav a{
+  color:#cfcbd4;font-size:.92rem;padding:7px 12px;border-radius:9px;
+  transition:.2s;
+}
+.nav a:hover{background:rgba(255,255,255,.09);color:#fff}
+.nav a.hot{color:var(--accent-2)}
+.nav-cta{
+  background:var(--accent)!important;color:#fff!important;
+  font-weight:600;padding:8px 16px!important;
+}
+
+/* Hero */
+.hero{
+  background:
+    radial-gradient(900px 380px at 82% -10%,rgba(226,59,82,.20),transparent 60%),
+    radial-gradient(700px 320px at 8% 110%,rgba(255,183,3,.13),transparent 60%),
+    linear-gradient(180deg,#131318 0%,#1b1b23 100%);
+  color:#fff;
+  padding:56px 0 64px;
+  overflow:hidden;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:44px;align-items:center;
+}
+.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.tag{
+  font-size:.78rem;letter-spacing:.04em;
+  padding:5px 11px;border-radius:99px;
+  border:1px solid rgba(255,255,255,.18);
+  color:#d9d5de;background:rgba(255,255,255,.04);
+}
+.tag.on{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+h1{
+  font-size:clamp(2.5rem,6vw,3.9rem);
+  line-height:1.08;font-weight:900;letter-spacing:.04em;
+  margin-bottom:18px;
+}
+h1 .stroke{
+  color:transparent;
+  -webkit-text-stroke:2px var(--accent-2);
+}
+.hero-lead{
+  color:#c5c1cb;font-size:1.02rem;max-width:38ch;margin-bottom:26px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:11px;
+  font-size:.95rem;font-weight:600;transition:.2s;border:1px solid transparent;
+}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:#c92e44;transform:translateY(-1px)}
+.btn-ghost{border-color:rgba(255,255,255,.25);color:#eceaf0}
+.btn-ghost:hover{background:rgba(255,255,255,.09)}
+.btn[aria-disabled="true"]{pointer-events:none;opacity:.72}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap}
+.stat b{display:block;font-size:1.3rem;color:var(--accent-2);font-weight:800;line-height:1.2}
+.stat span{font-size:.8rem;color:#a9a5b0;letter-spacing:.03em}
+
+.hero-visual{position:relative}
+.panel{
+  background:linear-gradient(160deg,#23232d,#17171e);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:22px;padding:22px;
+  box-shadow:0 30px 60px -30px rgba(0,0,0,.9);
+}
+.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.panel-head span{font-size:.8rem;color:#a9a5b0;letter-spacing:.08em}
+.dot-row{display:flex;gap:6px}
+.dot{width:9px;height:9px;border-radius:50%;background:#3a3a46}
+.dot.live{background:var(--accent)}
+.panel-item{
+  display:flex;gap:12px;align-items:center;
+  padding:11px 0;border-bottom:1px dashed rgba(255,255,255,.10);
+}
+.panel-item:last-child{border-bottom:0;padding-bottom:0}
+.panel-item .num{
+  font-size:.74rem;font-weight:800;color:#131318;background:var(--accent-2);
+  width:22px;height:22px;border-radius:6px;display:grid;place-items:center;flex:0 0 auto;
+}
+.panel-item p{font-size:.88rem;color:#dcd8e2;line-height:1.5}
+.panel-item p i{font-style:normal;color:#8d8996;font-size:.76rem;display:block}
+
+/* Section base */
+section{padding:64px 0}
+.sec-head{margin-bottom:34px;max-width:62ch}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.78rem;font-weight:700;letter-spacing:.14em;
+  color:var(--accent);text-transform:uppercase;margin-bottom:12px;
+}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--accent)}
+h2{
+  font-size:clamp(1.5rem,3vw,2rem);font-weight:800;line-height:1.25;
+  letter-spacing:.01em;margin-bottom:12px;
+}
+.sec-head p{color:var(--muted);font-size:.97rem}
+
+/* Feed cards */
+.feed{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;transition:.22s;display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 20px 36px -24px rgba(19,19,24,.34);border-color:#cfc6bb}
+.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.chip{
+  font-size:.72rem;font-weight:700;letter-spacing:.06em;
+  padding:4px 10px;border-radius:99px;
+  background:#fdecee;color:#c22a40;
+}
+.chip.gold{background:#fff5dd;color:#9a6a00}
+.chip.grey{background:#eeece9;color:#5c5a63}
+.time{font-size:.76rem;color:#9b98a1}
+.card h3{font-size:1.06rem;font-weight:800;line-height:1.45;margin-bottom:10px}
+.card p{font-size:.9rem;color:#57555e;flex:1}
+.card-link{
+  margin-top:16px;font-size:.84rem;font-weight:700;color:var(--accent);
+  display:inline-flex;align-items:center;gap:5px;
+}
+
+/* Explain band */
+.band{background:var(--paper-2);border-block:1px solid var(--line)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.prose p{font-size:.97rem;color:#3f3d46;margin-bottom:14px}
+.prose strong{color:var(--ink)}
+.pull{
+  border-left:3px solid var(--accent);
+  padding:4px 0 4px 16px;margin:20px 0;
+  font-size:1rem;color:var(--ink);font-weight:600;line-height:1.6;
+}
+.checklist{list-style:none;display:grid;gap:12px}
+.checklist li{
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px;font-size:.9rem;display:flex;gap:10px;align-items:flex-start;
+}
+.checklist .ic{
+  flex:0 0 auto;width:20px;height:20px;border-radius:6px;
+  background:#fdecee;color:#c22a40;display:grid;place-items:center;
+  font-size:.72rem;font-weight:800;margin-top:2px;
+}
+
+/* Timeline */
+.timeline{border-left:2px solid var(--line);margin-left:8px;display:grid;gap:26px;padding-left:26px}
+.tl-item{position:relative}
+.tl-item::before{
+  content:"";position:absolute;left:-34px;top:7px;
+  width:12px;height:12px;border-radius:50%;
+  background:var(--accent);border:3px solid var(--paper);
+}
+.tl-item time{font-size:.78rem;font-weight:700;color:var(--accent);letter-spacing:.05em}
+.tl-item h4{font-size:1rem;font-weight:800;margin:5px 0 6px}
+.tl-item p{font-size:.9rem;color:#57555e}
+
+/* FAQ */
+.faq{display:grid;gap:12px}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:16px 20px;
+}
+details[open]{border-color:#cfc6bb}
+summary{
+  cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;
+  display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:1.2rem;font-weight:800}
+details[open] summary::after{content:"−"}
+details p{font-size:.9rem;color:#57555e;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line)}
+
+/* Footer */
+.site-foot{background:var(--ink);color:#a9a5b0;padding:48px 0 30px;margin-top:8px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:36px;margin-bottom:32px}
+.foot-brand p{font-size:.88rem;margin-top:12px;max-width:34ch;line-height:1.7}
+.foot-col h5{color:#fff;font-size:.86rem;letter-spacing:.08em;margin-bottom:12px}
+.foot-col a{display:block;font-size:.86rem;padding:4px 0;color:#a9a5b0}
+.foot-col a:hover{color:var(--accent-2)}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.10);padding-top:20px;
+  font-size:.8rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+}
+
+/* Responsive */
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .hero-visual{order:-1;max-width:520px}
+  .feed{grid-template-columns:repeat(2,1fr)}
+  .two-col{grid-template-columns:1fr;gap:28px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:680px){
+  .head-inner{flex-wrap:wrap;gap:10px}
+  .nav{gap:2px}
+  .nav a{font-size:.84rem;padding:6px 9px}
+  .hero{padding:38px 0 44px}
+  .hero-lead{font-size:.95rem}
+  .feed{grid-template-columns:1fr}
+  section{padding:46px 0}
+  .hero-stats{gap:18px}
+  .panel{padding:18px}
+  .foot-grid{grid-template-columns:1fr;gap:24px}
+  .timeline{padding-left:20px}
+  .tl-item::before{left:-28px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="logo" href="#top" aria-label="黑料 首页">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M5 18L12 4l7 14" stroke="#ff4d6d" stroke-width="2.4" stroke-linejoin="round"/>
+          <circle cx="12" cy="19" r="1.6" fill="#ffb703"/>
+        </svg>
+      </span>
+      <span class="logo-text">黑料</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#feed" class="hot">热点合集</a>
+      <a href="#how">看点说明</a>
+      <a href="#timeline">动态时间线</a>
+      <a href="#faq">常见疑问</a>
+      <a href="#feed" class="nav-cta">看今日黑料</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="tag-row">
+          <span class="tag on">今日看点</span>
+          <span class="tag">热点合集</span>
+          <span class="tag">吃瓜观察</span>
+          <span class="tag">来源可查</span>
+        </div>
+        <h1 id="hero-title">黑料</h1>
+        <p class="hero-lead">把散落在各处的热点爆料收进一页：谁在讨论、讨论到什么程度、哪些说法还缺证据。黑料栏目按话题归类，读起来像一份可回看的吃瓜清单。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#feed">浏览热点合集</a>
+          <a class="btn btn-ghost" href="#how">了解判断方法</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>6</b><span>在更话题</span></div>
+          <div class="stat"><b>24h</b><span>动态更新节奏</span></div>
+          <div class="stat"><b>3 层</b><span>来源标注</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="panel" role="img" aria-label="黑料热点速览面板示意">
+          <div class="panel-head">
+            <span>HOT BOARD</span>
+            <span class="dot-row"><i class="dot live"></i><i class="dot"></i><i class="dot"></i></span>
+          </div>
+          <div class="panel-item">
+            <span class="num">1</span>
+            <p>某剧组选角传闻持续发酵<i>讨论集中于片方回应前后说法</i></p>
+          </div>
+          <div class="panel-item">
+            <span class="num">2</span>
+            <p>品牌合作方声明被反复引用<i>原文与二次转述存在出入</i></p>
+          </div>
+          <div class="panel-item">
+            <span class="num">3</span>
+            <p>旧访谈片段被重新翻出<i>时间线需要与账号发布时间对齐</i></p>
+          </div>
+          <div class="panel-item">
+            <span class="num">4</span>
+            <p>匿名投稿截图流转多个群组<i>截图来源尚未得到确认</i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feed -->
+  <section id="feed" class="wrap" aria-labelledby="feed-title">
+    <div class="sec-head">
+      <span class="eyebrow">热点合集</span>
+      <h2 id="feed-title">当前在被讨论的黑料话题</h2>
+      <p>每条按“发生了什么、目前说到哪一步、还缺什么”三件事整理，方便你判断这条黑料值不值得继续跟。</p>
+    </div>
+    <div class="feed">
+      <article class="card">
+        <div class="card-top"><span class="chip">娱乐</span><span class="time">讨论中</span></div>
+        <h3>选角传闻与片方回应</h3>
+        <p>网传名单与官方公布的演员表并不一致，片方随后给出简短回应。争论点在于回应是否针对同一份名单，目前双方说法尚未对齐。</p>
+        <a class="card-link" href="#timeline">查看时间线 →</a>
+      </article>
+      <article class="card">
+        <div class="card-top"><span class="chip gold">商业</span><span class="time">有声明</span></div>
+        <h3>合作方声明被反复转述</h3>
+        <p>原始声明篇幅不长，但经过多轮截图传播后出现了明显改动。对照原文可以看到，措辞强度在转述中被放大了。</p>
+        <a class="card-link" href="#how">如何核对原文 →</a>
+      </article>
+      <article class="card">
+        <div class="card-top"><span class="chip grey">社群</span><span class="time">待确认</span></div>
+        <h3>匿名投稿截图流转</h3>
+        <p>截图在多个群组间流转，最早发布账号已不可见。缺少完整对话上下文，这类黑料通常只能作为线索，不宜当作结论。</p>
+        <a class="card-link" href="#faq">判断标准 →</a>
+      </article>
+      <article class="card">
+        <div class="card-top"><span class="chip">往事</span><span class="time">旧料重提</span></div>
+        <h3>旧访谈片段被翻出</h3>
+        <p>片段本身真实存在，但被剪去了前后语境。重提价值在于补充背景，而不是制造新的对立，阅读时需要回到完整版本。</p>
+        <a class="card-link" href="#timeline">看前后语境 →</a>
+      </article>
+      <article class="card">
+        <div class="card-top"><span class="chip gold">行业</span><span class="time">多方发言</span></div>
+        <h3>项目撤档的两种说法</h3>
+        <p>一方称是排期调整，另一方称与内容修改有关。两种说法都能找到出处，但都没有给出书面材料，属于并行存在的解释。</p>
+        <a class="card-link" href="#how">分歧在哪 →</a>
+      </article>
+      <article class="card">
+        <div class="card-top"><span class="chip grey">待更</span><span class="time">持续跟进</span></div>
+        <h3>账号互关变化的解读</h3>
+        <p>互关状态变化被当作关系信号，但平台展示规则并不完全透明。此类黑料信息量偏低，更适合当作氛围参考。</p>
+        <a class="card-link" href="#faq">参考价值 →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- How -->
+  <section id="how" class="band" aria-labelledby="how-title">
+    <div class="wrap two-col">
+      <div class="prose">
+        <span class="eyebrow">看点说明</span>
+        <h2 id="how-title">读黑料，先分清三种层次</h2>
+        <p>黑料这个词在网络上被用得很宽，既指当事人已经公开回应的争议，也指一张没有出处的截图。混在一起看，容易把猜测当成事实。这里把内容按证据强度分开。</p>
+        <div class="pull">有原文、有回应、有时间点的，是<strong>可核实的争议</strong>；只有转述和情绪的，是<strong>讨论</strong>；连发布账号都找不到的，只能算<strong>线索</strong>。</div>
+        <p>同一件事在不同阶段会移动位置。片方回应之后，原本属于“讨论”的内容可能升格为“可核实”，也可能因为回应含糊而停在原地。页面里的时间线就是记录这种移动。</p>
+      </div>
+      <ul class="checklist">
+        <li><span class="ic">1</span><div><strong>先找原始出处。</strong>声明、名单、访谈原片，能拿到完整版本就不看裁剪版。</div></li>
+        <li><span class="ic">2</span><div><strong>对齐时间。</strong>谁先发布、谁后回应，顺序变了，结论往往也变。</div></li>
+        <li><span class="ic">3</span><div><strong>区分当事方与旁观者。</strong>当事人说法和第三方转述的证据分量不同。</div></li>
+        <li><span class="ic">4</span><div><strong>注意措辞强度。</strong>“已沟通”和“已否认”在转述中常被互换，这属于改动而非转述。</div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section id="timeline" class="wrap" aria-labelledby="tl-title">
+    <div class="sec-head">
+      <span class="eyebrow">动态时间线</span>
+      <h2 id="tl-title">一条黑料通常怎样走完一轮</h2>
+      <p>以近期选角传闻为例，把常见的传播节奏拆开看。每个阶段都有对应的判断动作，不必等到最后才下结论。</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <time>阶段一 · 线索出现</time>
+        <h4>匿名帖子与截图先行</h4>
+        <p>信息以截图形式出现，附带少量细节。此时内容尚未被任何当事方确认，适合记录而不适合转发定性。</p>
+      </div>
+      <div class="tl-item">
+        <time>阶段二 · 讨论扩散</time>
+        <h4>多个账号转述，说法开始分叉</h4>
+        <p>转述过程中出现新细节，也出现互相矛盾的版本。对照最早截图，可以看出哪些内容是后加的。</p>
+      </div>
+      <div class="tl-item">
+        <time>阶段三 · 当事方回应</time>
+        <h4>官方或本人给出简短说明</h4>
+        <p>回应往往只覆盖部分疑问。哪些问题被回答、哪些被跳过，本身就是值得记录的信息。</p>
+      </div>
+      <div class="tl-item">
+        <time>阶段四 · 沉淀</time>
+        <h4>热度回落，结论保留在有限范围</h4>
+        <p>多数黑料停在这一步：没有进一步材料，也没有明确否认。此时更合适的表述是“尚无定论”。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="band" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">常见疑问</span>
+        <h2 id="faq-title">关于黑料栏目本身</h2>
+        <p>四个常被问到的问题，涉及内容来源、更新方式与使用边界。</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>这里的内容来源是什么？</summary>
+          <p>以公开发布的声明、访谈、账号动态和媒体报导为主，社群截图只在标注为“待确认”时出现，并说明来源缺失的具体环节。</p>
+        </details>
+        <details>
+          <summary>为什么有的条目只有几句话？</summary>
+          <p>材料本身有限。与其补写推测，不如把已知部分说清楚，并标明还缺哪一块证据。</p>
+        </details>
+        <details>
+          <summary>黑料合集多久更新一次？</summary>
+          <p>按话题热度与新材料出现情况调整，热点期节奏更快，沉淀期以补充背景为主。</p>
+        </details>
+        <details>
+          <summary>看到不准确的内容怎么办？</summary>
+          <p>页内条目均标注了所处阶段。若发现原文与转述不符，可以优先对照时间线中列出的原始节点。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="#top">
+          <span class="logo-mark" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 18L12 4l7 14" stroke="#ff4d6d" stroke-width="2.4" stroke-linejoin="round"/>
+              <circle cx="12" cy="19" r="1.6" fill="#ffb703"/>
+            </svg>
+          </span>
+          <span class="logo-text">黑料</span>
+        </a>
+        <p>黑料热点合集，按话题记录爆料动态与讨论阶段，帮助读者分清线索、讨论与可核实的争议。</p>
+      </div>
+      <div class="foot-col">
+        <h5>栏目</h5>
+        <a href="#feed">热点合集</a>
+        <a href="#how">看点说明</a>
+        <a href="#timeline">动态时间线</a>
+        <a href="#faq">常见疑问</a>
+      </div>
+      <div class="foot-col">
+        <h5>使用</h5>
+        <a href="#how">来源标注规则</a>
+        <a href="#timeline">阶段划分</a>
+        <a href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>黑料 · 热点合集首页</span>
+      <span>内容以公开信息为限，未确认部分保留原有确定程度</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
