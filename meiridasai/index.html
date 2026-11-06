@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日大赛俄罗斯-俄罗斯热点大赛每日更新_吃瓜大赛俄罗斯热点合集</title>
+<meta name="description" content="每日大赛俄罗斯是俄罗斯热点大赛的每日内容合集，汇总当天最受关注的吃瓜大赛俄罗斯相关条目、网络热议与话题脉络，帮助访客快速了解每日大赛俄罗斯的最新热点走向。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2a4a'/%3E%3Ccircle cx='32' cy='28' r='12' fill='none' stroke='%23f2b134' stroke-width='4'/%3E%3Cpath d='M20 50h24' stroke='%23f2b134' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M32 16v-6M44 22l5-4M20 22l-5-4' stroke='%23f2b134' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --navy:#1b2a4a;
+  --navy-deep:#131e36;
+  --gold:#f2b134;
+  --gold-soft:#fbe3ae;
+  --paper:#f7f5f0;
+  --ink:#1f2430;
+  --muted:#5c6472;
+  --line:#e3ded2;
+  --card:#ffffff;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img,svg{display:block;max-width:100%;}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px;}
+
+/* 页头 */
+.site-header{
+  background:var(--navy);
+  color:#fff;
+  border-bottom:3px solid var(--gold);
+  position:sticky;top:0;z-index:50;
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;min-height:70px;flex-wrap:wrap;padding:10px 0;
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand-mark{width:42px;height:42px;flex:0 0 auto;}
+.brand-text{
+  font-size:19px;font-weight:700;letter-spacing:.5px;color:#fff;
+  line-height:1.3;
+}
+.brand-text small{
+  display:block;font-size:11px;font-weight:400;color:var(--gold-soft);
+  letter-spacing:2px;margin-top:2px;
+}
+.nav{display:flex;gap:8px;flex-wrap:wrap;}
+.nav a{
+  font-size:14px;padding:7px 13px;border-radius:999px;
+  color:#dfe4ee;border:1px solid transparent;transition:.2s;
+}
+.nav a:hover,.nav a:focus-visible{color:var(--navy);background:var(--gold);border-color:var(--gold);}
+.nav a.cta{background:var(--gold);color:var(--navy);font-weight:600;}
+
+/* 首屏 */
+.hero{
+  background:
+    radial-gradient(circle at 88% 12%, rgba(242,177,52,.22), transparent 42%),
+    linear-gradient(160deg,#1b2a4a 0%,#233659 58%,#1b2a4a 100%);
+  color:#fff;
+  padding:52px 0 46px;
+  overflow:hidden;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:38px;align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;letter-spacing:2px;color:var(--gold-soft);
+  border:1px solid rgba(242,177,52,.45);border-radius:999px;
+  padding:5px 14px;margin-bottom:18px;
+}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);}
+h1{
+  font-size:clamp(28px,4.4vw,44px);
+  line-height:1.22;margin:0 0 16px;font-weight:800;letter-spacing:1px;
+}
+h1 .hl{color:var(--gold);}
+.hero p.lead{
+  margin:0 0 24px;font-size:16px;color:#d7dded;max-width:36em;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 22px;border-radius:8px;font-size:15px;font-weight:600;
+  transition:.2s;cursor:pointer;border:1px solid transparent;
+}
+.btn-primary{background:var(--gold);color:var(--navy);}
+.btn-primary:hover{background:#ffc44f;}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4);}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+.btn[aria-disabled="true"]{
+  background:rgba(255,255,255,.12);color:#e8ecf5;
+  border-color:rgba(255,255,255,.28);pointer-events:none;
+  opacity:.85;
+}
+.hero-meta{
+  display:flex;gap:26px;margin-top:30px;flex-wrap:wrap;
+  border-top:1px solid rgba(255,255,255,.16);padding-top:20px;
+}
+.hero-meta div{font-size:13px;color:#b9c3d8;}
+.hero-meta strong{display:block;font-size:22px;color:var(--gold);font-weight:700;}
+
+/* 首屏插画 */
+.hero-art{
+  position:relative;border-radius:16px;overflow:hidden;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.14);
+  padding:18px;
+}
+.hero-art svg{width:100%;height:auto;}
+.art-caption{
+  margin-top:12px;font-size:12.5px;color:#aab6cf;letter-spacing:1px;
+  display:flex;justify-content:space-between;gap:10px;
+}
+
+/* 通用区块 */
+section{padding:56px 0;}
+.section-head{margin-bottom:30px;max-width:760px;}
+.section-tag{
+  font-size:12.5px;letter-spacing:2.5px;color:#b07f18;font-weight:700;
+  display:block;margin-bottom:8px;
+}
+h2{
+  font-size:clamp(22px,3vw,29px);margin:0 0 12px;font-weight:800;
+  color:var(--navy);line-height:1.35;
+}
+.section-head p{margin:0;color:var(--muted);font-size:15.5px;}
+
+/* 今日热点列表 */
+.today{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.hot-list{display:grid;gap:14px;}
+.hot-item{
+  display:grid;grid-template-columns:64px 1fr auto;gap:18px;align-items:center;
+  padding:18px 20px;background:var(--paper);border:1px solid var(--line);
+  border-radius:12px;transition:.2s;
+}
+.hot-item:hover{border-color:var(--gold);background:#fffdf7;transform:translateY(-2px);}
+.hot-rank{
+  font-size:24px;font-weight:800;color:#c9c2b0;text-align:center;
+  font-family:Georgia,serif;line-height:1;
+}
+.hot-item:nth-child(1) .hot-rank{color:#e0a41a;}
+.hot-body h3{font-size:16.5px;margin:0 0 5px;font-weight:700;color:var(--navy);}
+.hot-body p{margin:0;font-size:14px;color:var(--muted);}
+.hot-tag{
+  font-size:12px;padding:4px 11px;border-radius:999px;
+  background:#fdf1d8;color:#9a6c0d;white-space:nowrap;font-weight:600;
+}
+
+/* 栏目卡片 */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:24px 22px;display:flex;flex-direction:column;gap:10px;
+  transition:.22s;
+}
+.card:hover{box-shadow:0 12px 28px rgba(27,42,74,.09);transform:translateY(-3px);}
+.card-icon{
+  width:40px;height:40px;border-radius:10px;background:#fdf1d8;
+  display:flex;align-items:center;justify-content:center;color:#b07f18;
+}
+.card h3{margin:0;font-size:17px;color:var(--navy);font-weight:700;}
+.card p{margin:0;font-size:14.5px;color:var(--muted);}
+.card .more{
+  margin-top:auto;font-size:13.5px;font-weight:600;color:#b07f18;
+  padding-top:6px;
+}
+.card .more:hover{color:var(--navy);}
+
+/* 正文长文区 */
+.insight{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.insight-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:44px;align-items:start;}
+.prose p{margin:0 0 16px;font-size:15.5px;color:#3a4150;}
+.prose h3{font-size:18px;color:var(--navy);margin:26px 0 10px;}
+.quote-box{
+  background:var(--paper);border-left:4px solid var(--gold);
+  padding:16px 20px;border-radius:0 10px 10px 0;margin:20px 0;
+  font-size:15px;color:#4a5162;
+}
+.quote-box span{display:block;margin-top:8px;font-size:13px;color:#8a8070;}
+.aside-card{
+  background:var(--navy);color:#e5eaf4;border-radius:14px;padding:26px 24px;
+}
+.aside-card h3{color:var(--gold);font-size:17px;margin:0 0 14px;}
+.aside-card ul{margin:0;padding-left:18px;font-size:14.5px;line-height:2;}
+.aside-card ul li::marker{color:var(--gold);}
+.aside-card .hint{
+  margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.15);
+  font-size:13px;color:#a9b5cc;
+}
+
+/* 数据条 */
+.stats{background:var(--navy-deep);color:#fff;padding:46px 0;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;}
+.stat-num{font-size:clamp(24px,3.6vw,34px);font-weight:800;color:var(--gold);line-height:1.1;}
+.stat-label{font-size:13.5px;color:#b2bdd3;margin-top:8px;}
+
+/* 常见问题 */
+.faq-list{display:grid;gap:12px;max-width:860px;}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:16px 20px;
+}
+details[open]{border-color:var(--gold);}
+summary{
+  cursor:pointer;font-weight:700;color:var(--navy);font-size:15.5px;
+  list-style:none;display:flex;justify-content:space-between;gap:14px;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:"+";color:#b07f18;font-weight:800;font-size:18px;}
+details[open] summary::after{content:"−";}
+details p{margin:12px 0 0;font-size:14.5px;color:var(--muted);}
+
+/* 页尾 */
+.site-footer{background:var(--navy);color:#c4cde0;padding:44px 0 26px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px;color:#fff;font-weight:700;font-size:17px;}
+.site-footer p{font-size:13.5px;line-height:1.8;margin:0;color:#9fabc4;}
+.site-footer h4{font-size:14px;color:var(--gold);margin:0 0 12px;letter-spacing:1px;}
+.site-footer ul{list-style:none;margin:0;padding:0;font-size:13.5px;line-height:2.1;}
+.site-footer ul a:hover{color:var(--gold);}
+.footer-bottom{
+  margin-top:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.13);
+  font-size:12.5px;color:#8b97b0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+/* 响应式 */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:30px;}
+  .hero-art{order:2;}
+  .grid-3{grid-template-columns:1fr 1fr;}
+  .insight-grid{grid-template-columns:1fr;gap:30px;}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:28px;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:620px){
+  .header-inner{min-height:auto;padding:12px 0;}
+  .brand-text{font-size:17px;}
+  .brand-mark{width:36px;height:36px;}
+  .nav{gap:6px;}
+  .nav a{font-size:13px;padding:6px 11px;}
+  section{padding:40px 0;}
+  .hero{padding:36px 0 34px;}
+  .hot-item{grid-template-columns:44px 1fr;gap:12px;padding:15px 16px;}
+  .hot-tag{grid-column:2;justify-self:start;}
+  .hot-rank{font-size:20px;}
+  .grid-3{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:22px;}
+  .footer-grid{grid-template-columns:1fr;gap:24px;}
+  .hero-meta{gap:18px;}
+  .hero-meta strong{font-size:19px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="返回页面顶部">
+      <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#f2b134"/>
+        <circle cx="32" cy="27" r="11" fill="none" stroke="#1b2a4a" stroke-width="3.5"/>
+        <path d="M21 47h22" stroke="#1b2a4a" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M32 16v-5M43 21l4-3.5M21 21l-4-3.5" stroke="#1b2a4a" stroke-width="3.5" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">每日大赛俄罗斯<small>RUSSIA DAILY ARENA</small></span>
+    </a>
+    <nav class="nav" aria-label="主要导航">
+      <a href="#today">今日热点</a>
+      <a href="#lanes">内容栏目</a>
+      <a href="#insight">热点观察</a>
+      <a href="#faq">常见问题</a>
+      <a class="cta" href="#today">看今日榜单</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>每日更新 · 热点合集</span>
+        <h1 id="hero-title"><span class="hl">每日大赛俄罗斯</span></h1>
+        <p class="lead">每天把俄罗斯网络上最受关注的大赛话题摆到一页里：谁在榜上、热度从哪来、讨论走到了哪一步。每日大赛俄罗斯按日归档，方便你一次看清当天的热点全貌。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#today">浏览今日热点
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#lanes">了解栏目划分</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>每日</strong>内容更新节奏</div>
+          <div><strong>6</strong>个固定内容栏目</div>
+          <div><strong>1</strong>页看完当天热点</div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 420 300" role="img" aria-label="俄罗斯大赛热点日历与榜单插画">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f2b134" stop-opacity=".95"/>
+              <stop offset="1" stop-color="#f2b134" stop-opacity=".35"/>
+            </linearGradient>
+          </defs>
+          <rect x="10" y="16" width="400" height="268" rx="14" fill="#233659" stroke="rgba(242,177,52,.4)"/>
+          <rect x="10" y="16" width="400" height="46" rx="14" fill="url(#g1)" opacity=".22"/>
+          <circle cx="34" cy="39" r="6" fill="#f2b134"/>
+          <circle cx="54" cy="39" r="6" fill="#f2b134" opacity=".55"/>
+          <circle cx="74" cy="39" r="6" fill="#f2b134" opacity=".3"/>
+          <text x="96" y="45" font-family="sans-serif" font-size="15" fill="#fbe3ae">今日大赛热点 · 日历</text>
+          <g font-family="sans-serif" font-size="12" fill="#c9d3e6">
+            <rect x="32" y="82" width="86" height="58" rx="9" fill="#1b2a4a" stroke="rgba(242,177,52,.5)"/>
+            <text x="46" y="106" fill="#f2b134" font-size="18" font-weight="bold">01</text>
+            <text x="46" y="126">热点榜首</text>
+            <rect x="130" y="82" width="86" height="58" rx="9" fill="#1b2a4a" stroke="rgba(255,255,255,.14)"/>
+            <text x="144" y="106" fill="#e9eef8" font-size="18" font-weight="bold">02</text>
+            <text x="144" y="126">热议话题</text>
+            <rect x="228" y="82" width="86" height="58" rx="9" fill="#1b2a4a" stroke="rgba(255,255,255,.14)"/>
+            <text x="242" y="106" fill="#e9eef8" font-size="18" font-weight="bold">03</text>
+            <text x="242" y="126">吃瓜现场</text>
+            <rect x="326" y="82" width="62" height="58" rx="9" fill="#1b2a4a" stroke="rgba(255,255,255,.14)"/>
+            <text x="340" y="106" fill="#e9eef8" font-size="18" font-weight="bold">04</text>
+            <text x="338" y="126">待汇总</text>
+          </g>
+          <g font-family="sans-serif" font-size="12">
+            <rect x="32" y="158" width="356" height="14" rx="7" fill="#1b2a4a"/>
+            <rect x="32" y="158" width="278" height="14" rx="7" fill="#f2b134" opacity=".9"/>
+            <text x="32" y="192" fill="#c9d3e6">热度曲线 · 全天</text>
+            <path d="M32 244 L80 226 L128 236 L176 204 L224 216 L272 186 L320 200 L368 168" fill="none" stroke="#f2b134" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="368" cy="168" r="5" fill="#f2b134"/>
+            <text x="330" y="252" fill="#8f9cb6">实时热度</text>
+            <text x="32" y="252" fill="#8f9cb6">00:00</text>
+          </g>
+        </svg>
+        <div class="art-caption"><span>示意：榜单与热度走势</span><span>每日大赛俄罗斯</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 今日热点 -->
+  <section class="today" id="today" aria-labelledby="today-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">TODAY'S BOARD</span>
+        <h2 id="today-title">今日热点榜单</h2>
+        <p>每日大赛俄罗斯把当天讨论密度最高的条目按关注度排序，每条都标出所属栏目，方便你判断热点属于哪一类。</p>
+      </div>
+      <div class="hot-list">
+        <article class="hot-item">
+          <div class="hot-rank">01</div>
+          <div class="hot-body">
+            <h3>俄罗斯大赛话题登上多平台热榜</h3>
+            <p>同一话题在多个平台同步升温，讨论集中在事件经过与后续进展的梳理。</p>
+          </div>
+          <span class="hot-tag">吃瓜现场</span>
+        </article>
+        <article class="hot-item">
+          <div class="hot-rank">02</div>
+          <div class="hot-body">
+            <h3>热门条目出现反转说法</h3>
+            <p>新出现的说法与早期版本不一致，评论区围绕哪一版更可信展开争论。</p>
+          </div>
+          <span class="hot-tag">脉络梳理</span>
+        </article>
+        <article class="hot-item">
+          <div class="hot-rank">03</div>
+          <div class="hot-body">
+            <h3>旧话题被重新翻出</h3>
+            <p>过往大赛相关内容因新讨论被再次引用，形成新旧两条线的交叉阅读。</p>
+          </div>
+          <span class="hot-tag">话题回顾</span>
+        </article>
+        <article class="hot-item">
+          <div class="hot-rank">04</div>
+          <div class="hot-body">
+            <h3>网友观点分成两派</h3>
+            <p>争议点集中在事件性质判断上，双方各自引用截图与时间线作为依据。</p>
+          </div>
+          <span class="hot-tag">观点碰撞</span>
+        </article>
+        <article class="hot-item">
+          <div class="hot-rank">05</div>
+          <div class="hot-body">
+            <h3>热度回落但讨论仍在继续</h3>
+            <p>榜单排名下降，长尾讨论仍在进行，适合回看完整脉络再判断。</p>
+          </div>
+          <span class="hot-tag">长尾跟踪</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 内容栏目 -->
+  <section id="lanes" aria-labelledby="lanes-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">CONTENT LANES</span>
+        <h2 id="lanes-title">六个固定栏目，各管一类热点</h2>
+        <p>每日大赛俄罗斯不把所有内容混在一起。不同栏目承担不同的信息任务，从“发生了什么”到“怎么理解”逐层展开。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.5"/></svg>
+          </div>
+          <h3>今日热点</h3>
+          <p>当天关注度最高的条目，按热度排序，适合快速扫一遍再决定深入哪条。</p>
+          <a class="more" href="#today">查看榜单 →</a>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h13"/></svg>
+          </div>
+          <h3>脉络梳理</h3>
+          <p>把分散的说法按时间顺序排开，标出哪些是原始信息、哪些是二次转述。</p>
+          <a class="more" href="#insight">阅读观察 →</a>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/></svg>
+          </div>
+          <h3>吃瓜现场</h3>
+          <p>网友评论与讨论走向的集中呈现，保留原始语气，不做统一化的转述。</p>
+          <a class="more" href="#today">进入现场 →</a>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5M4 19h16"/><path d="M8 15l4-5 3 3 4-6"/></svg>
+          </div>
+          <h3>热度走势</h3>
+          <p>用走势描述话题的升温与回落，帮助判断一条热点是刚开始还是接近尾声。</p>
+          <a class="more" href="#insight">看走势 →</a>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <h3>话题回顾</h3>
+          <p>过往大赛相关内容按日期归档，新话题出现时可对照旧内容找相似处。</p>
+          <a class="more" href="#faq">查看说明 →</a>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z"/><path d="M3 12l9 4.5 9-4.5M3 16.5L12 21l9-4.5"/></svg>
+          </div>
+          <h3>观点碰撞</h3>
+          <p>把对立观点并排呈现，说明各自依据，读者可以自己判断哪边更有说服力。</p>
+          <a class="more" href="#insight">对比阅读 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 数据条 -->
+  <section class="stats" aria-label="站点内容规模示意">
+    <div class="wrap stats-grid">
+      <div>
+        <div class="stat-num">每日</div>
+        <div class="stat-label">固定更新节奏</div>
+      </div>
+      <div>
+        <div class="stat-num">6</div>
+        <div class="stat-label">内容栏目分类</div>
+      </div>
+      <div>
+        <div class="stat-num">5</div>
+        <div class="stat-label">今日榜单条目</div>
+      </div>
+      <div>
+        <div class="stat-num">1</div>
+        <div class="stat-label">页面读完当天热点</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热点观察正文 -->
+  <section class="insight" id="insight" aria-labelledby="insight-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">INSIGHT</span>
+        <h2 id="insight-title">为什么需要按日看热点</h2>
+        <p>热点话题变化快，单条内容往往只截取一个片段。按日归档的价值，在于把片段放回时间里。</p>
+      </div>
+      <div class="insight-grid">
+        <div class="prose">
+          <p>围绕每日大赛俄罗斯的内容，最容易被忽略的一点是时间。同一条话题，上午的说法和晚上的说法可能完全不同，原因可能是有新素材出现，也可能只是转述层层加码。把每天的内容固定在一页里，读者就能对照前后两天的版本，看出哪部分是稳定信息、哪部分还在变动。</p>
+          <h3>先看榜单，再看脉络</h3>
+          <p>榜单解决“今天大家在聊什么”，脉络解决“这件事是怎么走到今天的”。两者顺序不宜颠倒：先知道哪条值得看，再花时间读它的来龙去脉，阅读效率更高。每日大赛俄罗斯的榜单条目都带有栏目标签，正是为了让这一步判断更快。</p>
+          <h3>吃瓜语境下的信息取舍</h3>
+          <p>吃瓜类内容的传播动力是情绪与新鲜感，这决定了它的信息质量参差不齐。面对吃瓜大赛俄罗斯相关的说法，比较稳妥的做法是先分清三类内容：可核实的原始素材、带有立场的转述、以及纯情绪表达。前两类值得记录，第三类了解气氛即可，不必当作事实依据。</p>
+          <div class="quote-box">
+            热点会过去，但读热点的习惯会留下来。先问“这条信息从哪来”，再问“它改变了什么判断”，比急着站队有用得多。
+            <span>—— 栏目编辑手记</span>
+          </div>
+          <h3>热度回落不等于事情结束</h3>
+          <p>榜单排名下降，通常只说明讨论密度降低，不代表话题已经收尾。很多后续信息恰恰出现在热度回落之后，因为此时愿意认真核对的人变多了。因此在每日大赛俄罗斯的归档里，回落期的话题仍然会被保留，标注为长尾跟踪，方便需要完整脉络的读者回看。</p>
+        </div>
+        <aside class="aside-card">
+          <h3>阅读建议</h3>
+          <ul>
+            <li>先扫榜单标题，锁定一到两条</li>
+            <li>再看脉络，确认信息来源层次</li>
+            <li>对立观点并排读，不只看一边</li>
+            <li>热度回落期回看，信息更完整</li>
+          </ul>
+          <div class="hint">栏目内容以当日讨论的公开呈现为主，具体事实以原始来源为准。</div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常见问题 -->
+  <section id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">FAQ</span>
+        <h2 id="faq-title">常见问题</h2>
+        <p>关于每日大赛俄罗斯的内容范围与使用方式，集中说明如下。</p>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>每日大赛俄罗斯主要收录什么内容？</summary>
+          <p>以俄罗斯网络上当日讨论度较高的大赛相关话题为主，包含话题本身、讨论走向与观点分歧，按栏目归类呈现。</p>
+        </details>
+        <details>
+          <summary>榜单排序依据是什么？</summary>
+          <p>按当日讨论密度与跨平台出现频次综合排序，属于关注度的相对排序，不代表事件重要性的最终判断。</p>
+        </details>
+        <details>
+          <summary>页面内容会持续更新吗？</summary>
+          <p>站点按日更新，今日榜单与栏目内容随当天讨论变化调整，过往条目保留在话题回顾中。</p>
+        </details>
+        <details>
+          <summary>如何判断一条热点信息是否可信？</summary>
+          <p>建议先找原始素材的出处，再对照不同来源的表述差异。仅有转述、没有出处的说法，宜作为参考而非结论。</p>
+        </details>
+        <details>
+          <summary>可以下载今日热点内容吗？</summary>
+          <p>页面提供下载入口，当前下载资源尚未接入，按钮暂为不可用状态，后续开放后可在此获取整理版内容。</p>
+          <a class="btn btn-primary" style="margin-top:14px;" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#f2b134"/>
+            <circle cx="32" cy="27" r="11" fill="none" stroke="#1b2a4a" stroke-width="3.5"/>
+            <path d="M21 47h22" stroke="#1b2a4a" stroke-width="3.5" stroke-linecap="round"/>
+          </svg>
+          每日大赛俄罗斯
+        </div>
+        <p>每日大赛俄罗斯按日汇总俄罗斯热点大赛相关话题，把榜单、脉络与观点分歧放在同一页面，方便读者快速掌握当天的讨论全貌。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#today">今日热点榜单</a></li>
+          <li><a href="#lanes">六个内容栏目</a></li>
+          <li><a href="#insight">热点观察</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>栏目入口</h4>
+        <ul>
+          <li><a href="#today">吃瓜现场</a></li>
+          <li><a href="#insight">脉络梳理</a></li>
+          <li><a href="#insight">观点碰撞</a></li>
+          <li><a href="#faq">话题回顾</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>每日大赛俄罗斯 · 热点内容按日归档</span>
+      <span>页面内容以公开讨论呈现为主，事实以原始来源为准</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+            </html>
